@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("🌐Unit Converter App ")
+st.title("📊Unit Converter App ")
 st.markdown("### It Converts Length, Weight, and Time.")
 st.write("Enter a value and select the conversion type and get the result.")
 

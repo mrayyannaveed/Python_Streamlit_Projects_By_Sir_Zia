@@ -4,14 +4,28 @@ st.title("🌐Unit Converter App ")
 st.markdown("### It Converts Length, Weight, and Time.")
 st.write("Enter a value and select the conversion type and get the result.")
 
-category = st.selectbox("Select a conversion type", ["Length", "Weight", "Time"])
+category = st.selectbox("Select a conversion type", ["Length", "Temperature", "Weight", "Time"])
 
 def convert_units(category, value, unit):
     if category == "Length":
-        if unit == "Kilometers to miles":
+        if unit == "Meters to feet":
+            return value * 3.28084
+        elif unit == "Feet to meters":
+            return value / 3.28084
+        elif unit == "Kilometers to miles":
             return value * 0.621371
         elif unit == "Miles to kilometers":
             return value / 0.621371
+        
+    if category == "Temperature":
+        if unit == "Celsius to Fahrenheit":
+            return value * 9/5 + 32
+        elif unit == "Fahrenheit to Celsius":
+            return (value - 32) * 5/9
+        elif unit == "Celsius to Kelvin":
+            return value + 273.15
+        elif unit == "Kelvin to Celsius":
+            return value - 273.15
         
     elif category == "Weight":
         if unit == "Kilograms to pounds":
@@ -33,7 +47,9 @@ def convert_units(category, value, unit):
             return value * 24
 
 if category == "Length":
-    unit = st.selectbox("📏Select a unit", ["Kilometers to miles", "Miles to kilometers"])
+    unit = st.selectbox("📏Select a unit", ["Meters to feet","Feet to meters","Kilometers to miles", "Miles to kilometers"])
+elif category == "Temperature":
+    unit = st.selectbox("🌡️Select a unit", ["Celsius to Fahrenheit", "Fahrenheit to Celsius", "Celsius to Kelvin", "Kelvin to Celsius"])
 elif category == "Weight":
     unit = st.selectbox("⚖️Select a unit", ["Kilograms to pounds", "Pounds to kilograms"])
 elif category == "Time":

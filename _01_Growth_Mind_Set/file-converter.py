@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-import os
 import io as ByteIO
+
 
 st.set_page_config(
     page_title="🗃File Converter",

@@ -1,0 +1,3 @@
+[{"title": "Harry Potter and the Sorcerer's Stone", "author": "J K Rowling", "year": "1999", "genre": "Mystery", "read": true}, 
+{"title": "Harry Potter and the Chamber of Secrets", "author": "J K Rowling", "year": "2001", "genre": "Mystery", "read": true}, 
+{"title": "The Hobbit", "author": "J R Toklein", "year": "2010", "genre": "Adventure", "read": true}]
